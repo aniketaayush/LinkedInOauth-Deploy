@@ -4,11 +4,12 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "build": "cd frontend && CI=false npm run build",
+    "build": "cd frontend && npm run build",
     "install-frontend": "cd frontend && npm install --force",
     "postinstall": "npm run install-frontend",
     "start": "node server.js",
-    "frontend": "cd frontend && npm start"
+    "frontend": "cd frontend && npm start",
+    "dev": "concurrently \"nodemon server.js\" \"npm run frontend\""
   },
   "author": "priyanka",
   "license": "ISC",
