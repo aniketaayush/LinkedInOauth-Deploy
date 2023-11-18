@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "build": "cd frontend && npm run build",
+    "build": "cd frontend && CI=false npm run build",
     "install-frontend": "cd frontend && npm install --force",
     "postinstall": "npm run install-frontend",
     "start": "node server.js",
