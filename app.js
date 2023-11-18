@@ -221,6 +221,6 @@ app.post("/saveResumeData", async(req, res) => {
   res.send({status: "success"});
 })
 
-app.listen(5000, () => {
+app.listen(process.env.PORT, () => {
   console.log("Server Started");
 });
