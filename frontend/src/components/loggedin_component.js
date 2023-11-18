@@ -54,7 +54,7 @@ const LoggedInForm = () => {
     setLoading(false);
 
     //Fetch User Data
-    fetch("http://localhost:5000/userData", {
+    fetch("/userData", {
       method: "POST",
       crossDomain: true,
       headers: {
@@ -147,7 +147,7 @@ const LoggedInForm = () => {
     };
     console.log(resumeData);
     axios
-      .post("http://localhost:5000/saveResumeData", resumeData)
+      .post("/saveResumeData", resumeData)
       .then((res) => {
         console.log("Data Insertion Request Status: ", res.data.status);
       });

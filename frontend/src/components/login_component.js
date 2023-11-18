@@ -12,7 +12,7 @@ export default function Login() {
     e.preventDefault();
 
     console.log(email, password);
-    fetch("http://localhost:5000/login-user", {
+    fetch("/login-user", {
       method: "POST",
       crossDomain: true,
       headers: {
@@ -40,7 +40,7 @@ export default function Login() {
   }
 
   const LoginLinkedin = () => {
-    window.location.href = "http://localhost:5000/auth/linkedin";
+    window.location.href = "/auth/linkedin";
   };
 
   return (
